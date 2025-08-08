@@ -1,37 +1,21 @@
-const contenidoUno = document.getElementById('contenido-uno');
-const contenidoDos = document.getElementById('contenido-dos');
-const contenidoTres = document.getElementById('contenido-tres');
+document.addEventListener('DOMContentLoaded', () => {
+    const elements = document.querySelectorAll('.content-js');
 
-function agregarBlur(elemento1, elemento2) {
-    elemento1.classList.add('blur');
-    elemento2.classList.add('blur');
-}
+    elements.forEach(element => {
+        element.addEventListener('mouseenter', () => {
+            elements.forEach(other => {
+                if (other !== element) {
+                    other.classList.add('blur');
+                }
+            });
+        });
 
-function quitarBlur(elemento1, elemento2) {
-    elemento1.classList.remove('blur');
-    elemento2.classList.remove('blur');
-}
-
-contenidoUno.addEventListener('mouseover', () => {
-    agregarBlur(contenidoDos, contenidoTres);
-});
-
-contenidoUno.addEventListener('mouseout', () => {
-    quitarBlur(contenidoDos, contenidoTres);
-});
-
-contenidoDos.addEventListener('mouseover', () => {
-    agregarBlur(contenidoUno, contenidoTres);
-});
-
-contenidoDos.addEventListener('mouseout', () => {
-    quitarBlur(contenidoUno, contenidoTres);
-});
-
-contenidoTres.addEventListener('mouseover', () => {
-    agregarBlur(contenidoDos, contenidoUno);
-});
-
-contenidoTres.addEventListener('mouseout', () => {
-    quitarBlur(contenidoDos, contenidoUno);
+        element.addEventListener('mouseleave', () => {
+            elements.forEach(other => {
+                if (other.classList.contains('blur')) {  // ← Verificar primero
+                    other.classList.remove('blur');
+                }
+            });
+        });
+    });
 });

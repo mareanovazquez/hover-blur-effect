@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,40 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
     <h2>HOVER BLUR EFFECT CSS </h2>
     <section class="contenedor-general">
-        <div class="content"><h3>UNO</h3></div>
-        <div class="content"><h3>DOS</h3></div>
-        <div class="content"><h3>TRES</h3></div>
+        <div class="content">
+            <h3>UNO</h3>
+        </div>
+        <div class="content">
+            <h3>DOS</h3>
+        </div>
+        <div class="content">
+            <h3>TRES</h3>
+        </div>
     </section>
-    
+
     <h2>HOVER BLUR EFFECT JS </h2>
     <section class="contenedor-general-dos">
-        <div class="content-js contenido-uno" id="contenido-uno"><h3>UNO</h3></div>
-        <div class="content-js contenido-dos" id="contenido-dos"><h3>DOS</h3></div>
-        <div class="content-js contenido-tres" id="contenido-tres"><h3>TRES</h3></div>
+        <div class="content-js" data-content="uno">
+            <h3>UNO</h3>
+        </div>
+        <div class="content-js" data-content="dos">
+            <h3>DOS</h3>
+        </div>
+        <div class="content-js" data-content="tres">
+            <h3>TRES</h3>
+        </div>
     </section>
 
     <script src="./js/mouseoverBlur.js"></script>
 </body>
+
 </html>

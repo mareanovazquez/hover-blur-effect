@@ -97,6 +97,7 @@ h2 {
         /* MEJORA 8: Hover en contenedor para mejor control */
         .contenedor-general:hover .content {
             /* Estado base cuando hay hover en el contenedor */
+            filter: none;
         }
 
         /* MEJORA 9: Focus states para accesibilidad */
